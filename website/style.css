@@ -1,0 +1,1400 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap');
+
+*{
+    font-family: "Cairo", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+
+nav{ 
+    position:fixed;
+    top: 0;
+    right: 0;
+    height:90px;
+    width: 100%;
+    z-index: 999;
+    background-color: #0c4672;
+    display: flex;
+
+    justify-content:center;
+    align-items:center;
+}
+
+.logo {
+    text-decoration: none;
+    color :#ffffff;
+    font-weight: 700;
+    font-size: 1.8em;
+    position: absolute;
+    right: 0;
+    padding-right: 2rem;
+}
+
+
+nav .nav-items {
+    color: #0a4573;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    display: flex;
+    list-style-type: none;
+    position: absolute;
+    left: 0;
+
+}
+
+nav .nav-items .nav-item{
+    padding: 0 1rem;
+}
+
+nav .nav-link{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.1em;
+}
+
+nav .nav-link:hover{
+    color: #82cdd7;
+}
+
+section {
+    padding: 100px 200px;
+
+}
+
+body {
+    background-color: #cecece88
+    ;
+}
+    
+.main {
+
+    width: 100%;
+    min-height: 80vh;
+    display: flex;
+    align-items: right;
+    justify-content: right;
+    position: relative; /* لضبط الطبقات */
+    background: url('images/sh.jpg') no-repeat center ;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+    
+.main h2 {
+    
+    color: #6b6b6b;
+
+    font-size: 1.4em;
+    font-weight: 500;
+
+}
+
+
+.main h2 span {
+    display: inline-block;
+    margin-top: 250px;
+    margin-right: 0%;
+    color: #5c5c5c;
+    font-size: 3em;
+    font-weight: 600;
+    animation: moveUp 3s ease-in-out forwards;
+}
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.main h3 {
+    color: #8a8a8a;
+    font-size: 2em;
+    font-weight: 600;
+    
+    margin-top: 11px;
+    margin-bottom: 30px;
+    animation: moveUp 3s ease-in-out forwards;
+}
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.main-btn{ 
+    color: #ffffff;
+    background-color: #0c4672;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.187em;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    transition: 0.7s ease;
+    position: absolute;
+    animation: moveUp 3s ease;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.main-btn:hover {
+    background-color:#195d72 ;
+    transform: scale(1.1);
+}
+
+
+.social-icons a{
+    color:#000;
+    font-size: 1.1em;
+    padding-left: 30px;
+
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    color: #0a4573;
+    font-size: 2.2em;
+    font-weight: 800;
+    margin-bottom: 30px;
+
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap:wrap;
+
+}
+
+.card {
+    background-color: aliceblue;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(red, green, blue, alpha);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+}
+.card:hover{
+    transform: scale(1.1);
+
+}
+
+
+.icon { 
+    color: #0a4573;
+    font-size: 4em;
+    text-align: center;   
+}
+.info{
+    text-align: center;
+
+}
+.info h3{
+    color: #0a4573;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 10px;
+   
+}
+
+.project {
+    background-color: #0a4573;
+}
+
+.project.content {
+    margin-top: 30px;
+}
+
+.project-card {
+    background-color: #f0f8ff;
+    border: 1px solid #fff;
+    min-height: 10em;
+    width: 18em;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.7s ease-in-out;
+    margin-bottom: 15px;
+    
+}
+
+.project-card:hover {
+    transform: scale(1.1);
+}
+
+/* إخفاء النص الثانوي افتراضيًا */
+.project-title .project-category {
+    display: none;
+}
+
+/* إظهار النص الثانوي عند التمرير بالماوس */
+.project-card:hover .project-title .project-category {
+    display: block;
+}
+
+.project-card a {
+    align-items: center;
+}
+
+.ourprojects a { /* تم تصحيح الاسم هنا */
+    align-items: center;
+}
+
+.project-card image{
+    object-fit: cover;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-bottom: 15px;
+}
+
+.project-image img {
+  
+    padding-bottom: 10px; /* مسافة بين الصورة والنص داخل العنصر */
+    width: 100%;
+    height: 100%;
+    margin-bottom: 15px;
+    
+}
+
+.project-info {
+    padding: 2em;
+}
+
+.project-category {
+    font-size: 1em;
+    color: #000;
+
+}
+
+
+/* إخفاء النص الثانوي بشكل افتراضي */
+.project-card card-description {
+    font-size: 1em;
+    font-weight: 700;
+    color: #000000;
+    opacity: 0; /* إخفاء النص الثانوي افتراضيًا */
+    transform: translateY(20px); /* تحريك النص الثانوي لأسفل بشكل افتراضي */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* إظهار النص الثانوي عند تحريك الماوس */
+.project-card:hover .card-description {
+    opacity: 1; /* إظهار النص الثانوي */
+    transform: translateY(0); /* العودة إلى المكان الطبيعي للنص الثانوي */
+}
+
+.project-card ul {
+    display: none; /* إخفاء العناصر <li> بشكل افتراضي */
+}
+
+.project-card:hover ul {
+    display: block; /* إظهار العناصر <li> عند التمرير بالماوس */
+}
+
+.sec-btn{ 
+    color: #ffffff;
+    background-color: #0c4672;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    padding: 0.9375em 2.187em;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    transition: 0.7s ease;
+    padding-left: 1.7rem;
+    right: 45%;
+    position: absolute;
+    margin-top: 15px;
+}
+
+.sec-btn:hover {
+    background-color:#195d72 ;
+    transform: scale(1.1);
+
+}
+
+
+.more-details {
+    text-decoration: none;
+    color: #0a4573;
+}
+.more-details:hover {
+    color: #f0f8ff;
+
+}
+.contact .icon{
+    font-size: 4.5em;
+}
+
+.contact .info h3{
+    color: #000;
+}
+.contact .info p{
+    font-size: 1.5em;
+}
+
+.contact-form {
+    background-color: #0a4573;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    margin: auto;
+
+}
+
+
+.contact-form h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    
+    
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    
+}
+
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #1e8ba0;
+    color: #0a4573;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s ease;
+    
+}
+
+.contact-form button:hover {
+    background-color: #d1d1d1;
+}
+
+
+.h1 {
+    font-size: 30px;
+    color: #0a4573;
+    text-align: center;
+}
+
+
+
+
+
+/* فيما يخص صفحة about */
+.about{
+    background: linear-gradient(to right, #e6f4f6, #cee0e6, #95acba);
+    width: 100%;
+    height: 65vh;
+    background-size: 400% 400%; /* يحدد حجم الخلفية لتكون أكبر من حجم العنصر */
+    animation: gradientShift 5s ease infinite; /* إضافة الأنيمشن */
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+.about h4 {
+    font-size: 16px;
+    font-weight: 600;
+    max-width: 1000px;
+    color: #072236;
+    text-align: right;
+    animation: moveUp 3s ease-in-out forwards;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.about h2 {
+    
+    color: #772020;
+    font-size: 1.4em;
+    font-weight: 500;
+    text-align: center;
+    animation: moveUp 3s ease-in-out forwards;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+
+.about h2 span {
+    display: inline-block;
+    margin-top: 100px;
+    margin-right: 0%;
+    color: #292929;
+    font-size: 3em;
+    font-weight: 600;
+    
+}
+
+.about h3 {
+    color: #242424;
+    font-size: 2em;
+    display: flex;
+    font-weight: 600;
+    text-align: right;
+    margin-top: 11px;
+    margin-bottom: 30px;    animation: moveUp 3s ease-in-out 
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+    
+
+.about p{
+    display: inline-block;
+    margin-top: 20px;
+    color: #292929;
+    font-size: 0.8em;
+    font-weight: 600;
+    text-align: right;
+    max-width:  900px;;
+    align-items: center;
+
+
+}
+.sec-card {
+    background-color: aliceblue;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(red, green, blue, alpha);
+    border-radius: 10px;
+    padding: 20px;
+    margin: 15px;
+    transition: 0.7s ease;
+    justify-content:center;
+    text-align: justify;
+    float:right;
+    height: 22em;
+    
+    
+    
+}
+.sec-card:container{
+    text-align: right;
+}
+.sec-card:hover{
+    transform: scale(1.1);
+
+}
+.sec-icon {
+    font-size: 30px; 
+    margin-right: 15px; 
+}
+
+
+.four-card {
+    background-color: aliceblue;
+    width: 930px;
+    box-shadow: 0 5px 25px rgba(red, green, blue, alpha);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+    justify-content: center;
+    text-align: justify;
+    float: right;
+    
+}
+    
+.four-card:container{
+        text-align: right;
+    
+}
+.four-card:hover{
+    transform: scale(1.1);
+
+}
+.four-icon {
+    font-size: 40px; 
+    margin-right: 15px; 
+}
+
+/* فيما يخص صفحة ourservices*/
+
+.ourservices{
+    background: linear-gradient(to right, #e6f4f6, #cee0e6, #95acba);
+    width: 100%;
+    height: 50vh;
+    background-size: 400% 400%; /* يحدد حجم الخلفية لتكون أكبر من حجم العنصر */
+    animation: gradientShift 5s ease infinite; /* إضافة الأنيمشن */
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+.ourservices h2 {
+    
+    color: #772020;
+    font-size: 1.4em;
+    font-weight: 500;
+    text-align: right;
+    animation: moveUp 3s ease-in-out forwards;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+
+.ourservices h2 span {
+    display: inline-block;
+    margin-top: 100px;
+    margin-right: 0%;
+    color: #292929;
+    font-size: 3em;
+    font-weight: 600;    animation: moveUp 3s ease-in-out forwards;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+    
+
+.ourservices h3 {
+    color: #242424;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: right;
+    margin-top: 11px;
+    margin-bottom: 30px;    animation: moveUp 3s ease-in-out forwards;
+}
+
+.ourprojects{
+    background: linear-gradient(to right, #e6f4f6, #cee0e6, #95acba);
+    width: 100%;
+    height: 50vh;
+    background-size: 400% 400%; /* يحدد حجم الخلفية لتكون أكبر من حجم العنصر */
+    animation: gradientShift 5s ease infinite; /* إضافة الأنيمشن */
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+.thi-card {
+    background-color: aliceblue;
+    width: 21.25em;
+    box-shadow: 0 5px 25px rgba(red, green, blue, alpha);
+    border-radius: 10px;
+    padding: 25px;
+    margin: 15px;
+    transition: 0.7s ease;
+    justify-content: center;
+    text-align: justify;
+    float: right;
+    
+}
+    
+.thi-card:container{
+        text-align: right;
+    
+}
+.thi-card:hover{
+    transform: scale(1.1);
+
+}
+.thi-card:hover .card-info {
+    opacity: 0; /* إخفاء العنوان */
+    transform: translateY(-20px); /* تحريك العنوان إلى الأعلى عند التحويم */
+}
+.thi-icon {
+    font-size: 40px; 
+    margin-right: 15px; 
+}
+
+/* تنسيق محتوى الكارد */
+.thi-card-content {
+    position: relative;
+    z-index: 1;
+
+}
+/* إخفاء النص الثانوي بشكل افتراضي */
+.card-description {
+    font-size: 1em;
+    color: #000000;
+    opacity: 0; /* إخفاء النص الثانوي افتراضيًا */
+    transform: translateY(20px); /* تحريك النص الثانوي لأسفل بشكل افتراضي */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* إظهار النص الثانوي عند تحريك الماوس */
+.thi-card:hover .card-description {
+    opacity: 1; /* إظهار النص الثانوي */
+    transform: translateY(0); /* العودة إلى المكان الطبيعي للنص الثانوي */
+
+}
+/* فيما يخص صفحة الاعمال */
+
+.ourprojects h2 {
+    
+    color: #772020;
+    font-size: 1.4em;
+    font-weight: 500;
+    text-align: right;
+    animation: moveUp 3s ease-in-out forwards;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+
+.ourprojects h2 span {
+    display: inline-block;
+    margin-top: 100px;
+    margin-right: 0%;
+    color: #292929;
+    font-size: 3em;
+    font-weight: 600;    animation: moveUp 3s ease-in-out forwards;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+    
+
+.ourprojects h3 {
+    color: #242424;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: right;
+    margin-top: 11px;
+    margin-bottom: 30px;    animation: moveUp 3s ease-in-out forwards;
+}
+
+
+/* فيما يخص صفحة المؤشرات  */
+.Financial{
+    background: linear-gradient(to right, #e6f4f6, #cee0e6, #95acba);
+    width: 100%;
+    height: 50vh;
+    background-size: 400% 400%; /* يحدد حجم الخلفية لتكون أكبر من حجم العنصر */
+    animation: gradientShift 5s ease infinite; /* إضافة الأنيمشن */
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+.Financial h2 {
+    
+    color: #772020;
+    font-size: 1.4em;
+    font-weight: 500;
+    text-align: right;
+    animation: moveUp 3s ease-in-out forwards;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+
+.Financial h2 span {
+    display: inline-block;
+    margin-top: 100px;
+    margin-right: 0%;
+    color: #292929;
+    font-size: 3em;
+    font-weight: 600;    animation: moveUp 3s ease-in-out forwards;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+    
+table {
+    width: 100%;
+    border-collapse: collapse;
+    direction: rtl;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+tr:hover {
+    background-color: #f1f1f1;
+}
+
+td {
+    color: #555;
+}
+
+/* فيما يخص صفحة التواصل الاخيرة */
+
+.contacts {
+    background: linear-gradient(to right, #e6f4f6, #cee0e6, #95acba);
+    width: 100%;
+    height: 50vh;
+    background-size: 400% 400%; /* يحدد حجم الخلفية لتكون أكبر من حجم العنصر */
+    animation: gradientShift 5s ease infinite; /* إضافة الأنيمشن */
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+.contacts h2 {
+    
+    color: #772020;
+    font-size: 1.4em;
+    font-weight: 500;
+    text-align: right;
+    animation: moveUp 3s ease-in-out forwards;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+
+.contacts h2 span {
+    display: inline-block;
+    margin-top: 100px;
+    margin-right: 0%;
+    color: #292929;
+    font-size: 3em;
+    font-weight: 600;    animation: moveUp 3s ease-in-out forwards;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+    
+
+.contacts h3 {
+    color: #242424;
+    font-size: 1.5em;
+    font-weight: 600;
+    text-align: right;
+    margin-top: 11px;
+    margin-bottom: 30px;    animation: moveUp 3s ease-in-out forwards;
+}
+
+.card p{
+
+    font-weight: 500;
+    font-size: 1em;
+    position:relative;
+    text-decoration: none;
+    color: black;
+  }
+.card a{
+    text-decoration: none;
+    color:#000
+}
+
+/* فيما يخص صفحة الدراسات  ourstudies */
+.ourstudies {
+    background: linear-gradient(to right, #e6f4f6, #cee0e6, #95acba);
+    width: 100%;
+    height: 50vh;
+    background-size: 400% 400%; /* يحدد حجم الخلفية لتكون أكبر من حجم العنصر */
+    animation: gradientShift 5s ease infinite; /* إضافة الأنيمشن */
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+.ourstudies h2 {
+    
+    display: inline-block;
+    margin-top: 100px;
+    margin-right: 0%;
+    color: #292929;
+    font-size: 3em;
+    font-weight: 600;    animation: moveUp 3s ease-in-out forwards;
+}
+
+@keyframes moveUp {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    50% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+/* فيما يخص الفوتر footer */
+.foot {
+    background-color: #000;
+    color: #fff;
+    padding: 2em;
+    display: flex;
+    justify-content: space-between; 
+}
+
+
+
+
+.footer-title span {
+    color:#1e8ba0;
+}
+
+.footer .social .icons{
+    font-size: 1.3em;
+    padding: 0 12px 0 0; 
+}
+
+
+
+/* عند عرض الشاشة بحجم أقل من 900px */
+@media (max-width: 900px) {
+    * {
+        font-weight: 500;
+        text-align: center; /* تغيير المحاذاة في الشاشات الصغيرة */
+    }
+
+    .main-cont {
+        align-items: center;
+        width: 100%;
+    }
+
+    section {
+        padding: 80px 20px;
+        align-items: center;
+    }
+}
+
+/* عند عرض الشاشة بحجم أقل من 1024px */
+@media (max-width: 1024px) {
+    .main h2 span {
+        display: inline-block;
+        margin-top: 300px;
+        margin-bottom: 0px;
+        margin-right: 0;
+        text-align: right;
+        color: #5c5c5c;
+        font-size: 2em;
+        font-weight: 600;
+    }
+}
+
+/* عند عرض الشاشة بحجم أقل من 768px (أجهزة الجوال) */
+@media (max-width: 768px) {
+    .main h2 span {
+        margin-top: 50px;
+        font-size: 1.5em; /* تقليل حجم الخط في الجوالات */
+    }
+
+    /* تنسيق زر الإغلاق */
+    .close-btn {
+        font-size: 40px;
+        color: rgb(0, 0, 0);
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    /* إخفاء السايد بار بشكل افتراضي */
+    .sidebar {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 250px;
+        height: 100%;
+        background-color: #f4fcfc;
+        color: white;
+        padding-top: 20px;
+        z-index: 1000;
+        transform: translateX(100%); /* إخفاء السايد بار خارج الشاشة */
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .sidebar ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .sidebar ul li {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .sidebar ul li a {
+        color: #0a4573;
+        text-decoration: none;
+    }
+
+    /* إخفاء القائمة الأساسية عند فتح السايد بار */
+    .nav-items.active {
+        display: none;
+    }
+
+    /* إظهار السايد بار عند إضافة الفئة 'sidebar-open' */
+    .sidebar-open {
+        transform: translateX(0); /* إظهار السايد بار */
+    }
+
+    /* إظهار زر القائمة فقط في الشاشات الصغيرة */
+    .menu-toggle {
+        display: block;
+        position: absolute; /* استخدام الوضع المطلق */
+        top: 10px; /* المسافة من الأعلى */
+        left: 20px; /* المسافة من اليسار */
+        cursor: pointer;
+        font-size: 30px;
+        color: #ffffff;
+        padding: 10px;
+        z-index: 1001; /* تأكد من أن الزر يظهر فوق العناصر الأخرى */
+    }
+
+    .nav-items {
+        display: block;
+    }
+
+    /* إظهار السايد بار عند النقر على زر القائمة */
+    .sidebar {
+        display: block;
+    }
+}
+
+/* إخفاء السايد بار في الشاشات الأكبر من 768px */
+@media (min-width: 769px){
+    .sidebar {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+}
+
+@media (max-width: 768px) {
+    table {
+        font-size: 4px; /* تقليل حجم الخط في الجوال */
+    }
+
+    th, td {
+        padding: 4px; /* تقليل الحشو داخل الخلايا على الجوال */
+    }
+}
+@media screen and (max-width: 430px) {
+    .main {
+        background: url('images/mob.webp') no-repeat bottom ;
+        background: rgba(56, 117, 173, 0.418); /* لون أزرق داكن شفاف */
+        background-size: cover;
+        background-attachment:fixed;
+        padding:0;
+        margin: 0;
+
+    }
+
+    .main h2 span {
+        font-size: 35px; /* تقليل حجم h1 لشاشات صغيرة جدًا */
+        color: #5c5c5c;
+        position: 50px;
+        top: 50px;
+        right: 100px;
+    }
+    .main h3 {
+        font-size: 20px; /* تقليل حجم h1 لشاشات صغيرة جدًا */
+        color: #8a8a8a;    }
+
+    .about h2 {
+        font-size: 14px; /* تقليل حجم h2 لشاشات صغيرة جدًا */
+    }
+
+    .about h3 {
+        font-size: 20px; /* تقليل حجم h3 لشاشات صغيرة جدًا */
+    }
+
+    .about h4 {
+        font-size: 14px; /* تقليل حجم h4 لشاشات صغيرة جدًا */
+    }
+    .ourservices h2 {
+        font-size: 17px; /* تقليل حجم h3 لشاشات صغيرة جدًا */
+    }
+
+    .ourservices h3 {
+        font-size: 18px; /* تقليل حجم h4 لشاشات صغيرة جدًا */
+    }
+    .ourprojects h2 {
+        font-size: 18px; /* تقليل حجم h4 لشاشات صغيرة جدًا */
+    }
+    .ourprojects h3 {
+        font-size: 20px; /* تقليل حجم h4 لشاشات صغيرة جدًا */
+    }
+    .ourstudies h2 {
+        font-size: 40px; /* تقليل حجم h4 لشاشات صغيرة جدًا */
+    }
+    .contacts h2{
+        font-size: 18px; /* تقليل حجم h4 لشاشات صغيرة جدًا */
+    }
+    .Financial {
+        background: linear-gradient(to right, #e6f4f6, #cee0e6, #95acba);
+        width: 100%;
+        height: 35vh;
+        background-size: 400% 400%; /* يحدد حجم الخلفية لتكون أكبر من حجم العنصر */
+        animation: gradientShift 5s ease infinite; /* إضافة الأنيمشن */
+    }
+    .Financial h2 {
+        font-size: 12px; /* تقليل حجم h3 لشاشات صغيرة جدًا */
+    }
+    .main-btn {
+        left: 50%; /* تعيين الزر في منتصف الصفحة */
+        transform: translateX(-50%) translateY(-50%); /* تحريك الزر في المنتصف أفقيًا وعموديًا */
+        top: 65%; /* تعيين الزر في المنتصف عموديًا */
+        animation: none; /* إلغاء الأنيميشن في الشاشات الصغيرة */
+    }
+}
+
+
+
+/* مقاس الشاشة الصغيرة للزر الاول  */
+
+@media (max-width: 768px) {
+
+    .main-btn {
+        left: 50%; /* تعيين الزر في منتصف الصفحة */
+        transform: translateX(-50%) translateY(-50%); /* تحريك الزر في المنتصف أفقيًا وعموديًا */
+        top: 70%; /* تعيين الزر في المنتصف عموديًا */
+        animation: none; /* إلغاء الأنيميشن في الشاشات الصغيرة */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main {
+        background: url('images/ipad.jpg') no-repeat  ;
+
+        background-attachment:fixed;
+        padding:0;
+        margin: 0;
+
+    }
+    /* مقاس الشاشة الصغيرة للزر الثاني  */
+
+
+}
+    .sec-btn {
+        left: 50%; /* تعيين الزر في منتصف الصفحة */
+        transform: translateX(-50%); /* تحريك الزر ليتوسط عند المنتصف */
+        right: auto; /* إلغاء الـ right ليكون الزر في المنتصف بشكل صحيح */
+    }
+
+
+
+@media (max-width : 820px) {
+    .main-btn {
+        left: 50%; /* تعيين الزر في منتصف الصفحة */
+        transform: translateX(-50%) translateY(-50%); /* تحريك الزر في المنتصف أفقيًا وعموديًا */
+        top: 80%; /* تعيين الزر في المنتصف عموديًا */
+        animation: none; /* إلغاء الأنيميشن في الشاشات الصغيرة */
+    }
+
+}
+
+
+/* مقاس الشاشة الصغيرة للزر الثاني  */
+
+    .sec-btn {
+        left: 50%; /* تعيين الزر في منتصف الصفحة */
+        transform: translateX(-50%); /* تحريك الزر ليتوسط عند المنتصف */
+        right: auto; /* إلغاء الـ right ليكون الزر في المنتصف بشكل صحيح */
+    }
+
+@media (max-width: 1024px) {
+    .main {
+        background: url('images/ipad.jpg') no-repeat bottom ;
+        background-size: cover;
+        background-attachment:fixed;
+        background-size: contain; /* عرض الصورة بالكامل مع الحفاظ على النسب */
+        background-position: center;
+    }
+
+    .sec-btn {
+        left: 50%; /* تعيين الزر في منتصف الصفحة */
+        transform: translateX(-50%); /* تحريك الزر ليتوسط عند المنتصف */
+        right: auto; /* إلغاء الـ right ليكون الزر في المنتصف بشكل صحيح */
+    }
+
+.Financial {
+    background: linear-gradient(to right, #e6f4f6, #cee0e6, #95acba);
+    width: 100%;
+    height: 30vh;
+    background-size: 400% 400%; /* يحدد حجم الخلفية لتكون أكبر من حجم العنصر */
+    animation: gradientShift 5s ease infinite; /* إضافة الأنيمشن */
+}
+
+}
+
+
+
+

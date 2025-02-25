@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title> شـارة | المؤشـرات </title> <!--عنوان التاب-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+      <!-- <header>
+        <a href="#" class="logo">شـارة</a>
+        <nav class="navigation">
+            <ul class="nav-item">
+            <a href="#services"> خدمـاتنا </a>
+            <a href="#projects"> اعمـالنا السابقة</a>
+            <a href="#Financial indicators"> المؤشـرات المالية</a>
+            <a href="#about"> عن شارة</a>
+            <a href="#contact"> تواصـل معنا </a>
+        </nav>
+        <i class="fas fa-bars"></i>
+    </header>-->
+
+    <!--Navbar section-->
+    <Navbar section>
+        <nav>
+            <a href="index.html" class="logo">شـارة</a>
+    
+            <!-- زر فتح السايد بار (يظهر فقط في الجوالات) -->
+            <div class="menu-toggle" onclick="toggleSidebar()">
+                ☰
+            </div>
+    
+            <!-- القائمة العادية -->
+            <ul class="nav-items active">
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link"> عن شارة</a>
+                </li>
+                <li class="nav-item">
+                    <a href="ourservice.html" class="nav-link"> خدمـاتنا </a>
+                </li>
+                <li class="nav-item">
+                    <a href="ourprojects.html" class="nav-link"> اعمـالنا السابقة</a> 
+                </li>
+                <li class="nav-item">
+                    <a href="ourstudies.html" class="nav-link"> ملخصات الدراسات </a>
+                </li>
+                <li class="nav-item">
+                    <a href="Financial.html" class="nav-link"> المؤشـرات المالية</a>
+                </li>
+              
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link"> تواصـل معنا </a>
+                </li>
+            </ul>
+    
+            <!-- السايد بار (يظهر فقط في الجوالات) -->
+            <div id="sidebar" class="sidebar">
+                <div class="close-btn" onclick="closeSidebar()">×</div> <!-- زر الإغلاق -->
+                <ul>
+                  <li><a href=""</a></li>
+                    <li><a href=""</a></li>
+                    <li><a href=""</a></li>
+                    <li><a href="index.html">الصفحة الرئيسية</a></li>
+                    <li><a href="about.html">عن شارة</a></li>
+                    <li><a href="ourservice.html">خدماتنا</a></li>
+                    <li><a href="ourprojects.html">أعمالنا السابقة</a></li>
+                    <li><a href="ourstudies.html"> ملخص الدراسات</a></li>
+                    <li><a href="Financial.html">المؤشرات المالية</a></li>
+                    <li><a href="contact.html">تواصل معنا</a></li>
+                </ul>
+            </div>
+        </nav>
+    </Navbar>
+    
+    <section class="Financial">
+        <div class="Financial-cont">
+           <h2><span>المؤشرات المـالية </span> </h2>
+           
+           </div>
+           </section>
+
+
+
+           <section>
+            <table id="stockTable">
+              <thead>
+                <tr>
+                  <th colspan="3"></th>
+                  <!-- ترك ثلاث خلايا فارغة للعمود الأول والثاني والثالث -->
+                  <th colspan="5" style="text-align: center">النسب المالية</th>
+                  <!-- العمود الرابع إلى الثامن -->
+                </tr>
+                <tr>
+                  <th>القطاع</th>
+                  <th>اسم الشركة</th>
+                  <th>رمز الشركة</th>
+                  <th>العائد على الأصول</th>
+                  <th>العائد على حقوق المساهمين</th>
+                  <th>المديونية</th>
+                  <th>هامش اجمالي الربح</th>
+                  <th>هامش صافي الربح</th>
+                  <th>مؤشر شارة</th>
+                  <th>تفسير مؤشر شارة</th>
+                </tr>
+              </thead>
+              <tbody>
+                <!-- البيانات ستظهر هنا -->
+              </tbody>
+            </table>
+          </section>
+          <!-- الجداول ستضاف هنا باستخدام JavaScript -->
+      
+          <footer style="text-align: center; padding: 20px; background-color: #f1f1f1;">
+            <div class="social-icons">
+                <a href="https://wa.me/966502187235" target="_blank">
+                    <i class="fab fa-whatsapp whatsapp-icon"></i>
+                </a>
+                <a href="mailto:sharah84@hotmail.com"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2025 جميع الحقوق محفوظة لـ مكتب شـارة </p>
+        </footer>
+        <script src="./script.js"></script>
+        
+        <script src="nav.js"></script>
+        
+        </body>
+        </html>
